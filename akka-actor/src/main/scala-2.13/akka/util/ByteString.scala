@@ -1331,7 +1331,7 @@ final class ByteStringBuilder extends Builder[Byte, ByteString] {
     _tempLength = 0
   }
 
-  def result: ByteString =
+  def result(): ByteString =
     if (_length == 0) ByteString.empty
     else {
       clearTemp()

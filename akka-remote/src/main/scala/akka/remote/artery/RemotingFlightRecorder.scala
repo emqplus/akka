@@ -39,7 +39,7 @@ object RemotingFlightRecorder extends ExtensionId[RemotingFlightRecorder] with E
       // JFR not available on Java 8
       NoOpRemotingFlightRecorder
 
-  override def lookup(): ExtensionId[_ <: Extension] = this
+  override def lookup: ExtensionId[_ <: Extension] = this
 }
 
 /**
