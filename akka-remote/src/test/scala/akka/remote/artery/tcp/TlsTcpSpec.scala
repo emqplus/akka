@@ -53,9 +53,9 @@ class TlsTcpWithRotatingKeysSSLEngineSpec extends TlsTcpSpec(ConfigFactory.parse
     akka.remote.artery.ssl {
        ssl-engine-provider = akka.remote.artery.tcp.ssl.RotatingKeysSSLEngineProvider
        rotating-keys-engine {
-         key-file = ${getClass.getClassLoader.getResource("ssl/node.example.com.pem").getPath}
-         cert-file = ${getClass.getClassLoader.getResource("ssl/node.example.com.crt").getPath}
-         ca-cert-file = ${getClass.getClassLoader.getResource("ssl/exampleca.crt").getPath}
+         key-file = ${classOf[TlsTcpWithRotatingKeysSSLEngineSpec].getClassLoader.getResource("ssl/node.example.com.pem").getPath}
+         cert-file = ${classOf[TlsTcpWithRotatingKeysSSLEngineSpec].getClassLoader.getResource("ssl/node.example.com.crt").getPath}
+         ca-cert-file = ${classOf[TlsTcpWithRotatingKeysSSLEngineSpec].getClassLoader.getResource("ssl/exampleca.crt").getPath}
        }
     }
     """))
